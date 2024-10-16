@@ -98,7 +98,7 @@ def main():
         with open("texto_cifrado.txt", "w") as f: f.write(final_content)
 
     elif option == "D":
-        key_file_name = input("Qual o nome do arquivo de chave? Digite 0 para chave.txt, ou o nome do arquivo sem .txt")
+        key_file_name = input("Qual o nome do arquivo de chave? Digite 0 para chave.txt, ou o nome do arquivo sem .txt. ")
         if key_file_name == "0": key_file_name = "chave"
         with open(key_file_name + ".txt", "r") as file: key_file_content = file.read()
         final_content = vernam_decipher(file_content, key_file_content)
