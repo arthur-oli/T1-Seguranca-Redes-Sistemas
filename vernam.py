@@ -20,7 +20,10 @@ def vernam_decipher(cypher_content, key_content):
 
         binary_cypher_content += new_cypher_letter
         binary_key_content += new_key_letter
-    
+
+    print(binary_cypher_content)
+    print(binary_key_content)
+
     for number_cypher, number_key in zip(binary_cypher_content, binary_key_content):
         if number_key == "0" or number_key == "1" and number_cypher == "0" or number_cypher == "1":
             if number_cypher == number_key:
