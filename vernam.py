@@ -102,8 +102,8 @@ def main():
         if key_file_name == "0": key_file_name = "chave"
         with open(key_file_name + ".txt", "r") as file: key_file_content = file.read()
         final_content = vernam_decipher(file_content, key_file_content)
-        print(f"Texto cifrado original, obtido do arquivo '{file_name}.txt':", file_content)
-        print(f"Chave, obtida do arquivo '{key_file_name}.txt':", file_content)
+        print(f"\nTexto cifrado original, obtido do arquivo '{file_name}.txt':", file_content)
+        print(f"Chave, obtida do arquivo '{key_file_name}.txt':", key_file_content)
         print("Texto decifrado final, salvo no arquivo 'texto_decifrado.txt':", final_content)
         with open("texto_decifrado.txt", "w") as f: f.write(final_content)
 
